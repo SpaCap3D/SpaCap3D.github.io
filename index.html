@@ -1,0 +1,208 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>SpaCap3D</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="./index_files/images/icon.png">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./index_files/codemirror.min.css">
+    <link rel="stylesheet" href="./index_files/app.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.min(1).css">
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS3QXR96SJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LS3QXR96SJ');
+    </script>
+
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./index_files/codemirror.min.js"></script>
+    <script src="./index_files/clipboard.min.js"></script>
+
+    <script src="./index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Spatiality-guided Transformer for 3D Dense Captioning on Point Clouds
+            </h1>
+            <!-- <h6 class="col-md-12 text-center">
+                <b><i>SpaCap3D</i></b>
+            </h6> -->
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        Heng Wang
+                    </li>
+                    <li>
+                        <a href="https://chaoyivision.github.io/" target='_blank'>
+                          Chaoyi Zhang
+                        </a>
+                    </li>
+                    <li>
+                        Jianhui Yu
+                    </li>
+                    <li>
+                        <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/tom-cai.html" target='_blank'>
+                          Weidong Cai
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        University of Sydney
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/todo" target='_blank'>
+                            <img src="./index_files/images/paper.png" height="80px"><br>
+                                <h4><strong>Main Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./supplementary.pdf" target='_blank'>
+                            <img src="./index_files/images/supp.png" height="80px"><br>
+                                <h4><strong>Supp. Materials</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#video">
+                            <img src="index_files/images/youtube_icon_dark.png" height="80px"><br>
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="https://github.com/heng-hw/SpaCap3D" target='_blank'>
+                            <img src="./index_files/images/github_pad.png" height="80px"><br>
+                                <h4><strong>Code</strong></h4> <p style="color:blue;font-size:11px;"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#BibTeX">
+                            <img src="./index_files/images/bibtex.jpg" height="80px"><br>
+                                <h4><strong>BibTeX</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./index_files/images/teaser.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                Dense captioning in 3D point clouds is an emerging vision-and-language task involving object-level 3D scene understanding. Apart from coarse semantic class prediction and bounding box regression as in traditional 3D object detection, 3D dense captioning aims at producing a further and finer instance-level label of natural language description on visual appearance and spatial relations for each scene object of interest. To detect and describe objects in a scene, following the spirit of neural machine translation, we propose a transformer-based encoder-decoder architecture, namely SpaCap3D, to transform objects into descriptions, where we especially investigate the relative spatiality of objects in 3D scenes and design a spatiality-guided encoder via a token-to-token spatial relation learning objective and an object-centric decoder for precise and spatiality-enhanced object caption generation. Evaluated on two benchmark datasets, ScanRefer and ReferIt3D, our proposed SpaCap3D outperforms the baseline method Scan2Cap by 4.94% and 9.61% in CIDEr@0.5IoU, respectively.                 </p>
+            </div>
+        </div>
+
+
+        <div class="row" id="video">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
+                To be released soon!
+                <!-- <div class="text-center">
+                    <video id="video_id" width="100%" controls="" controlsList="nodownload">>
+                        <source src="./video-SpaCap3D.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="en" src="./@@inproceedings{SpaCap3D,
+                            title={Spatiality-guided Transformer for 3{D} Dense Captioning on Point Clouds},
+                            author={Wang, Heng and Zhang, Chaoyi and Yu, Jianhui and Cai, Weidong},
+                            booktitle={Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence, {IJCAI-22}},
+                            year={2022}
+                        }SpaCap3D.vtt">
+                    </video>
+
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                        var video = document.querySelector('#video_id'); // get the video element
+                        var tracks = video.textTracks; // one for each track element
+                        var track = tracks[0]; // corresponds to the first track element
+                        track.mode = 'hidden';});
+                    </script>
+
+                </div> -->
+            </div>
+        </div>
+
+
+
+
+        <div class="row" id="dataset">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Main Results
+                </h3>
+                <h4>ScanRefer</h4>
+                <img src="./index_files/images/result_scanrefer.jpg" class="img-responsive" alt="benchmark"><br>
+                <h4>Nr3D from ReferIt3D</h4>
+                <img src="./index_files/images/result_referit3d.jpg" class="img-responsive" alt="benchmark"><br>
+            </div>
+        </div>
+
+         <div class="row" id="BibTeX">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+               If you find our project useful in your research, please kindly cite our paper via:
+                <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 10px">
+@inproceedings{SpaCap3D,
+    title={Spatiality-guided Transformer for 3{D} Dense Captioning on Point Clouds},
+    author={Wang, Heng and Zhang, Chaoyi and Yu, Jianhui and Cai, Weidong},
+    booktitle={Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence, {IJCAI-22}},
+    year={2022}
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                The website template was borrowed from <a href="https://sggpoint.github.io/" target='_blank'>Chaoyi Zhang's project</a>.
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
